@@ -1,0 +1,275 @@
+[
+  {
+    "title": "Immobiliare Valle Serena",
+    "categoryName": "Agenzia immobiliare",
+    "address": "Via dei Tigli 12, Torano Finto TE",
+    "street": "Via dei Tigli 12",
+    "city": "Torano Finto",
+    "state": "TE",
+    "countryCode": "IT",
+    "website": "https://www.valleserena.example.com",
+    "email": "info@valleserena.example.com",
+    "phone": "+39 000 000 0001",
+    "totalScore": 4.7,
+    "reviewsCount": 38,
+    "location": {
+      "lat": 42.7,
+      "lng": 13.78
+    },
+    "permanentlyClosed": false,
+    "placeId": "FINTO_001",
+    "url": "https://maps.example.com/place/FINTO_001"
+  },
+  {
+    "title": "Casa Borgo Alto",
+    "categoryName": "Agenzia immobiliare",
+    "address": "Piazza Fontana 3, Montefinto TE",
+    "street": "Piazza Fontana 3",
+    "city": "Montefinto",
+    "state": "TE",
+    "countryCode": "IT",
+    "website": "https://www.casaborgoalto.example.com",
+    "email": "info@casaborgoalto.example.com",
+    "phone": "+39 000 000 0002",
+    "totalScore": 4.2,
+    "reviewsCount": 15,
+    "location": {
+      "lat": 42.64,
+      "lng": 13.65
+    },
+    "permanentlyClosed": false,
+    "placeId": "FINTO_002",
+    "url": "https://maps.example.com/place/FINTO_002"
+  },
+  {
+    "title": "Agenzia Pratoverde",
+    "categoryName": "Agenzia immobiliare",
+    "address": "Corso Prova 45, Rivafinta PE",
+    "street": "Corso Prova 45",
+    "city": "Rivafinta",
+    "state": "PE",
+    "countryCode": "IT",
+    "website": "https://www.pratoverde.example.com",
+    "email": "info@pratoverde.example.com",
+    "phone": "+39 000 000 0003",
+    "totalScore": 4.8,
+    "reviewsCount": 62,
+    "location": {
+      "lat": 42.47,
+      "lng": 14.2
+    },
+    "permanentlyClosed": false,
+    "placeId": "FINTO_003",
+    "url": "https://maps.example.com/place/FINTO_003"
+  },
+  {
+    "title": "Immobiliare Mare Calmo",
+    "categoryName": "Agenzia immobiliare",
+    "address": "Lungomare Esempio 8, Spiaggiafinta PE",
+    "street": "Lungomare Esempio 8",
+    "city": "Spiaggiafinta",
+    "state": "PE",
+    "countryCode": "IT",
+    "website": "https://www.marecalmo.example.com",
+    "email": "info@marecalmo.example.com",
+    "phone": "+39 000 000 0004",
+    "totalScore": 3.9,
+    "reviewsCount": 9,
+    "location": {
+      "lat": 42.43,
+      "lng": 14.24
+    },
+    "permanentlyClosed": false,
+    "placeId": "FINTO_004",
+    "url": "https://maps.example.com/place/FINTO_004"
+  },
+  {
+    "title": "Studio Casa Querceto",
+    "categoryName": "Agenzia immobiliare",
+    "address": "Via del Querceto 21, Colleprova CH",
+    "street": "Via del Querceto 21",
+    "city": "Colleprova",
+    "state": "CH",
+    "countryCode": "IT",
+    "website": "https://www.querceto.example.com",
+    "email": "info@querceto.example.com",
+    "phone": "+39 000 000 0005",
+    "totalScore": 4.5,
+    "reviewsCount": 27,
+    "location": {
+      "lat": 42.36,
+      "lng": 14.15
+    },
+    "permanentlyClosed": false,
+    "placeId": "FINTO_005",
+    "url": "https://maps.example.com/place/FINTO_005"
+  },
+  {
+    "title": "Immobiliare Sette Colli Finti",
+    "categoryName": "Agenzia immobiliare",
+    "address": "Via Roma Prova 7, Settecolli Finto CH",
+    "street": "Via Roma Prova 7",
+    "city": "Settecolli Finto",
+    "state": "CH",
+    "countryCode": "IT",
+    "website": "https://www.settecollifinti.example.com",
+    "email": "info@settecollifinti.example.com",
+    "phone": "+39 000 000 0006",
+    "totalScore": 4.0,
+    "reviewsCount": 11,
+    "location": {
+      "lat": 42.3,
+      "lng": 14.3
+    },
+    "permanentlyClosed": false,
+    "placeId": "FINTO_006",
+    "url": "https://maps.example.com/place/FINTO_006"
+  },
+  {
+    "title": "Casa Gran Pianoro",
+    "categoryName": "Agenzia immobiliare",
+    "address": "Viale Esempio 2, Pianoro Finto AQ",
+    "street": "Viale Esempio 2",
+    "city": "Pianoro Finto",
+    "state": "AQ",
+    "countryCode": "IT",
+    "website": "https://www.granpianoro.example.com",
+    "email": "info@granpianoro.example.com",
+    "phone": "+39 000 000 0007",
+    "totalScore": 4.6,
+    "reviewsCount": 19,
+    "location": {
+      "lat": 42.36,
+      "lng": 13.42
+    },
+    "permanentlyClosed": false,
+    "placeId": "FINTO_007",
+    "url": "https://maps.example.com/place/FINTO_007"
+  },
+  {
+    "title": "Agenzia Fonte Antica",
+    "categoryName": "Agenzia immobiliare",
+    "address": "Via della Fonte 5, Borgofonte AQ",
+    "street": "Via della Fonte 5",
+    "city": "Borgofonte",
+    "state": "AQ",
+    "countryCode": "IT",
+    "website": "https://www.fonteantica.example.com",
+    "email": "info@fonteantica.example.com",
+    "phone": "+39 000 000 0008",
+    "totalScore": 3.6,
+    "reviewsCount": 6,
+    "location": {
+      "lat": 42.33,
+      "lng": 13.38
+    },
+    "permanentlyClosed": true,
+    "placeId": "FINTO_008",
+    "url": "https://maps.example.com/place/FINTO_008"
+  },
+  {
+    "title": "Immobiliare Ponte Vecchio Finto",
+    "categoryName": "Agenzia immobiliare",
+    "address": "Via del Ponte 14, Pontefinto TE",
+    "street": "Via del Ponte 14",
+    "city": "Pontefinto",
+    "state": "TE",
+    "countryCode": "IT",
+    "website": "https://www.pontevecchiofinto.example.com",
+    "email": "info@pontevecchiofinto.example.com",
+    "phone": "+39 000 000 0009",
+    "totalScore": 4.9,
+    "reviewsCount": 84,
+    "location": {
+      "lat": 42.68,
+      "lng": 13.72
+    },
+    "permanentlyClosed": false,
+    "placeId": "FINTO_009",
+    "url": "https://maps.example.com/place/FINTO_009"
+  },
+  {
+    "title": "Casa Oliveto",
+    "categoryName": "Agenzia immobiliare",
+    "address": "Contrada Ulivi 1, Olivafinta PE",
+    "street": "Contrada Ulivi 1",
+    "city": "Olivafinta",
+    "state": "PE",
+    "countryCode": "IT",
+    "website": "https://www.casaoliveto.example.com",
+    "email": "info@casaoliveto.example.com",
+    "phone": "+39 000 000 0010",
+    "totalScore": 4.3,
+    "reviewsCount": 22,
+    "location": {
+      "lat": 42.4,
+      "lng": 14.1
+    },
+    "permanentlyClosed": false,
+    "placeId": "FINTO_010",
+    "url": "https://maps.example.com/place/FINTO_010"
+  },
+  {
+    "title": "Rete Casa Italia Franchising – Punto Pescara Prova",
+    "categoryName": "Agenzia immobiliare",
+    "address": "Via Catena 99, Rivafinta PE",
+    "street": "Via Catena 99",
+    "city": "Rivafinta",
+    "state": "PE",
+    "countryCode": "IT",
+    "website": "https://www.retecasaitalia.example.com",
+    "email": "info@retecasaitalia.example.com",
+    "phone": "+39 000 000 0011",
+    "totalScore": 4.1,
+    "reviewsCount": 210,
+    "location": {
+      "lat": 42.465,
+      "lng": 14.215
+    },
+    "permanentlyClosed": false,
+    "placeId": "FINTO_011",
+    "url": "https://maps.example.com/place/FINTO_011"
+  },
+  {
+    "title": "Immobiliare Lago Blu Finto",
+    "categoryName": "Agenzia immobiliare",
+    "address": "Via del Lago 30, Lagofinto AQ",
+    "street": "Via del Lago 30",
+    "city": "Lagofinto",
+    "state": "AQ",
+    "countryCode": "IT",
+    "website": "https://www.lagoblufinto.example.com",
+    "email": "info@lagoblufinto.example.com",
+    "phone": "+39 000 000 0012",
+    "totalScore": 4.4,
+    "reviewsCount": 31,
+    "location": {
+      "lat": 42.28,
+      "lng": 13.5
+    },
+    "permanentlyClosed": false,
+    "placeId": "FINTO_012",
+    "url": "https://maps.example.com/place/FINTO_012"
+  },
+  {
+    "title": "Agenzia Pratoverde srl",
+    "categoryName": "Agenzia immobiliare",
+    "address": "Corso Prova 45, Rivafinta PE",
+    "street": "Corso Prova 45",
+    "city": "Rivafinta",
+    "state": "PE",
+    "countryCode": "IT",
+    "website": "https://www.pratoverde.example.com",
+    "email": "info@pratoverde.example.com",
+    "phone": "+39 000 000 0003",
+    "totalScore": 4.8,
+    "reviewsCount": 62,
+    "location": {
+      "lat": 42.47,
+      "lng": 14.2
+    },
+    "permanentlyClosed": false,
+    "placeId": "FINTO_013",
+    "url": "https://maps.example.com/place/FINTO_013"
+  }
+]

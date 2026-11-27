@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard GTM – Simulazione</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    background: #f4f5f7;
+    color: #1f2933;
+    font-size: 15px;
+    line-height: 1.45;
+  }
+  .banner {
+    background: #b91c1c;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: .5px;
+    padding: 14px 16px;
+  }
+  main { max-width: 1100px; margin: 0 auto; padding: 24px 20px 48px; }
+  h1 { font-size: 24px; margin: 0 0 4px; }
+  .sottotitolo { color: #616e7c; margin: 0 0 24px; }
+  section {
+    background: #fff;
+    border: 1px solid #e4e7eb;
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 28px;
+  }
+  h2 { font-size: 20px; margin: 0 0 16px; }
+  h3 { font-size: 16px; margin: 26px 0 10px; color: #323f4b; }
+  .riquadri {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+  }
+  .riquadro {
+    background: #f8fafc;
+    border: 1px solid #e4e7eb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .riquadro .etichetta { font-size: 13px; color: #616e7c; }
+  .riquadro .valore { font-size: 24px; font-weight: 700; margin-top: 2px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 9px 10px; border-bottom: 1px solid #e4e7eb; text-align: right; white-space: nowrap; }
+  th:first-child, td:first-child { text-align: left; }
+  th { background: #f8fafc; font-size: 13px; color: #52606d; font-weight: 600; }
+  tfoot td { font-weight: 700; border-top: 2px solid #cbd2d9; }
+  .nessuno { color: #9aa5b1; font-style: italic; }
+  .tabella-wrap { overflow-x: auto; }
+  .grafico { display: flex; flex-direction: column; gap: 8px; }
+  .riga-barra { display: grid; grid-template-columns: 170px 1fr; align-items: center; gap: 12px; }
+  .riga-barra .nome { text-align: right; font-size: 14px; }
+  .traccia { background: #f1f3f5; border-radius: 4px; height: 28px; position: relative; }
+  .barra {
+    height: 100%;
+    background: #64748b;
+    border-radius: 4px;
+    min-width: 2px;
+  }
+  .barra.verde { background: #16a34a; }
+  .barra.blu { background: #3b6fb6; }
+  .barra.vinto { background: #16a34a; }
+  .barra.perso { background: #9aa5b1; }
+  .val-barra {
+    position: absolute; top: 0; bottom: 0;
+    display: flex; align-items: center;
+    padding-left: 8px; font-size: 13px; font-weight: 600; white-space: nowrap;
+  }
+  .nota { font-size: 13px; color: #616e7c; margin-top: 10px; }
+  .legenda-verde { color: #16a34a; font-weight: 700; }
+  @media (max-width: 600px) {
+    .riga-barra { grid-template-columns: 110px 1fr; }
+    .banner { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">SIMULAZIONE – dati finti del corso GTM</div>
+
+<main>
+  <h1>Dashboard: campagne e pipeline</h1>
+  <p class="sottotitolo">Esercizio 08 – Misurare. Tutti i dati sono inventati; nessuna agenzia è reale.</p>
+
+  <section id="campagne">
+    <h2>1 · Campagne e-mail</h2>
+    <div class="riquadri" id="riquadri-campagne"></div>
+
+    <h3>Dettaglio per campagna</h3>
+    <div class="tabella-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Campagna</th><th>Inviate</th><th>Risposte</th><th>Positive</th><th>Meeting</th>
+            <th>Costi</th><th>Tasso di risposta</th><th>Tasso positivo</th><th>Costo per meeting</th>
+          </tr>
+        </thead>
+        <tbody id="tabella-campagne"></tbody>
+        <tfoot id="totale-campagne"></tfoot>
+      </table>
+    </div>
+
+    <h3>Costo per meeting per campagna</h3>
+    <div class="grafico" id="grafico-campagne"></div>
+    <p class="nota"><span class="legenda-verde">■ Verde</span> = campagna più conveniente (costo per meeting più basso). Le campagne senza meeting non hanno un costo per meeting.</p>
+  </section>
+
+  <section id="pipeline">
+    <h2>2 · Pipeline trattative</h2>
+    <div class="riquadri" id="riquadri-pipeline"></div>
+
+    <h3>Numero di trattative per fase</h3>
+    <div class="grafico" id="grafico-fasi"></div>
+
+    <h3>Importi per fase</h3>
+    <div class="tabella-wrap">
+      <table>
+        <thead>
+          <tr><th>Fase</th><th>Trattative</th><th>Probabilità</th><th>Importo totale</th><th>Importo ponderato</th></tr>
+        </thead>
+        <tbody id="tabella-fasi"></tbody>
+        <tfoot id="totale-fasi"></tfoot>
+      </table>
+    </div>
+    <p class="nota">Importo ponderato = importo × probabilità. Trattative aperte = tutte le fasi tranne Chiuso Vinto e Chiuso Perso.</p>
+  </section>
+</main>
+
+<script>
+// ===== Dati copiati da campagne_finte.csv =====
+const campagne = [
+  { nome: "A Teramo",   inviate: 200, risposte: 12, positive: 3, meeting: 2, costi: 80 },
+  { nome: "B Pescara",  inviate: 500, risposte: 20, positive: 4, meeting: 4, costi: 200 },
+  { nome: "C L'Aquila", inviate: 150, risposte: 3,  positive: 0, meeting: 0, costi: 60 }
+];
+
+// ===== Dati copiati da trattative_finte.csv =====
+const trattative = [
+  { nome: "Serralta – CRM e automazioni",        fase: "Nuovo Lead",            prob: 0.10, importo: 1200, chiusura: "2027-01-31" },
+  { nome: "Monteluce – CRM e automazioni",       fase: "Contatto Iniziale",     prob: 0.20, importo: 1000, chiusura: "2027-01-31" },
+  { nome: "Casa Valfiorita – CRM e automazioni", fase: "Contatto Iniziale",     prob: 0.20, importo: 1500, chiusura: "2026-12-31" },
+  { nome: "Collefinto – CRM e automazioni",      fase: "Contatto Iniziale",     prob: 0.20, importo: 1000, chiusura: "2027-02-26" },
+  { nome: "Pietralta – CRM e automazioni",       fase: "Presentazione Servizi", prob: 0.40, importo: 1200, chiusura: "2026-12-31" },
+  { nome: "Rocca Serena – CRM e automazioni",    fase: "Presentazione Servizi", prob: 0.40, importo: 1800, chiusura: "2026-12-31" },
+  { nome: "Lungofiume – CRM e automazioni",      fase: "Negoziazione",          prob: 0.70, importo: 2000, chiusura: "2026-12-15" },
+  { nome: "Fontechiara – CRM e automazioni",     fase: "Chiuso Vinto",          prob: 1.00, importo: 1500, chiusura: "2026-11-26" },
+  { nome: "Casa Prova – CRM e automazioni",      fase: "Chiuso Vinto",          prob: 1.00, importo: 1500, chiusura: "2026-11-26" },
+  { nome: "Colle Azzurro – CRM e automazioni",   fase: "Chiuso Perso",          prob: 0.00, importo: 1200, chiusura: "2026-11-26" }
+];
+
+const ordineFasi = ["Nuovo Lead", "Contatto Iniziale", "Presentazione Servizi", "Negoziazione", "Chiuso Vinto", "Chiuso Perso"];
+
+// ===== Formattazione italiana (fatta a mano: punto per le migliaia, virgola per i decimali) =====
+function numero(n, decimali = 0) {
+  const parti = Math.abs(n).toFixed(decimali).split(".");
+  parti[0] = parti[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  return (n < 0 ? "-" : "") + parti.join(",");
+}
+function euro(n)   { return numero(n, Number.isInteger(n) ? 0 : 2) + " €"; }
+function dollari(n){ return "$ " + numero(n, Number.isInteger(n) ? 0 : 2); }
+function perc(x)   { return numero(x * 100, 1) + "%"; }
+
+function riquadro(etichetta, valore) {
+  return `<div class="riquadro"><div class="etichetta">${etichetta}</div><div class="valore">${valore}</div></div>`;
+}
+function barra(nome, valore, max, testo, classe) {
+  const larghezza = max > 0 ? (valore / max) * 100 : 0;
+  return `<div class="riga-barra">
+      <div class="nome">${nome}</div>
+      <div class="traccia">
+        <div class="barra ${classe}" style="width:${larghezza}%"></div>
+        <div class="val-barra" style="left:${larghezza}%">${testo}</div>
+      </div>
+    </div>`;
+}
+
+// ===== Sezione 1 – Campagne =====
+const tot = campagne.reduce((a, c) => ({
+  inviate: a.inviate + c.inviate, risposte: a.risposte + c.risposte,
+  positive: a.positive + c.positive, meeting: a.meeting + c.meeting, costi: a.costi + c.costi
+}), { inviate: 0, risposte: 0, positive: 0, meeting: 0, costi: 0 });
+
+const costoPerMeeting = c => c.meeting > 0 ? c.costi / c.meeting : null;
+const testoCPM = c => c.meeting > 0 ? euro(Math.round(costoPerMeeting(c) * 100) / 100) : '<span class="nessuno">nessun meeting</span>';
+
+document.getElementById("riquadri-campagne").innerHTML =
+  riquadro("E-mail inviate", numero(tot.inviate)) +
+  riquadro("Risposte", numero(tot.risposte)) +
+  riquadro("Tasso di risposta", perc(tot.risposte / tot.inviate)) +
+  riquadro("Meeting", numero(tot.meeting)) +
+  riquadro("Costi totali", euro(tot.costi)) +
+  riquadro("Costo per meeting", tot.meeting > 0 ? euro(Math.round(tot.costi / tot.meeting * 100) / 100) : "nessun meeting");
+
+document.getElementById("tabella-campagne").innerHTML = campagne.map(c => `
+  <tr>
+    <td>${c.nome}</td><td>${numero(c.inviate)}</td><td>${numero(c.risposte)}</td><td>${numero(c.positive)}</td>
+    <td>${numero(c.meeting)}</td><td>${euro(c.costi)}</td>
+    <td>${perc(c.risposte / c.inviate)}</td><td>${perc(c.positive / c.inviate)}</td><td>${testoCPM(c)}</td>
+  </tr>`).join("");
+
+document.getElementById("totale-campagne").innerHTML = `
+  <tr>
+    <td>Totale</td><td>${numero(tot.inviate)}</td><td>${numero(tot.risposte)}</td><td>${numero(tot.positive)}</td>
+    <td>${numero(tot.meeting)}</td><td>${euro(tot.costi)}</td>
+    <td>${perc(tot.risposte / tot.inviate)}</td><td>${perc(tot.positive / tot.inviate)}</td><td>${testoCPM(tot)}</td>
+  </tr>`;
+
+const conMeeting = campagne.filter(c => c.meeting > 0);
+const minCPM = Math.min(...conMeeting.map(costoPerMeeting));
+const maxCPM = Math.max(...conMeeting.map(costoPerMeeting));
+document.getElementById("grafico-campagne").innerHTML = campagne.map(c => {
+  const v = costoPerMeeting(c);
+  if (v === null) return barra(c.nome, 0, maxCPM, '<span class="nessuno">nessun meeting</span>', "");
+  return barra(c.nome, v, maxCPM, testoCPM(c), v === minCPM ? "verde" : "");
+}).join("");
+
+// ===== Sezione 2 – Pipeline =====
+const perFase = ordineFasi.map(fase => {
+  const lista = trattative.filter(t => t.fase === fase);
+  return {
+    fase,
+    conteggio: lista.length,
+    prob: lista.length ? lista[0].prob : 0,
+    importo: lista.reduce((s, t) => s + t.importo, 0),
+    ponderato: lista.reduce((s, t) => s + t.importo * t.prob, 0)
+  };
+});
+
+const aperte = trattative.filter(t => t.fase !== "Chiuso Vinto" && t.fase !== "Chiuso Perso");
+const valoreAperte = aperte.reduce((s, t) => s + t.importo, 0);
+const ponderatoAperte = aperte.reduce((s, t) => s + t.importo * t.prob, 0);
+const vinte = trattative.filter(t => t.fase === "Chiuso Vinto").length;
+const perse = trattative.filter(t => t.fase === "Chiuso Perso").length;
+const tassoVincita = (vinte + perse) > 0 ? perc(vinte / (vinte + perse)) : "nessuna chiusa";
+
+document.getElementById("riquadri-pipeline").innerHTML =
+  riquadro("Valore trattative aperte", dollari(valoreAperte)) +
+  riquadro("Valore ponderato aperte", dollari(Math.round(ponderatoAperte * 100) / 100)) +
+  riquadro("Tasso di vincita", tassoVincita) +
+  riquadro("Trattative totali", numero(trattative.length)) +
+  riquadro("Vinte / perse", `${vinte} / ${perse}`);
+
+const maxConteggio = Math.max(...perFase.map(f => f.conteggio));
+document.getElementById("grafico-fasi").innerHTML = perFase.map(f => {
+  const classe = f.fase === "Chiuso Vinto" ? "vinto" : f.fase === "Chiuso Perso" ? "perso" : "blu";
+  return barra(f.fase, f.conteggio, maxConteggio, numero(f.conteggio), classe);
+}).join("");
+
+document.getElementById("tabella-fasi").innerHTML = perFase.map(f => `
+  <tr>
+    <td>${f.fase}</td><td>${numero(f.conteggio)}</td><td>${perc(f.prob).replace(",0%", "%")}</td>
+    <td>${dollari(f.importo)}</td><td>${dollari(Math.round(f.ponderato * 100) / 100)}</td>
+  </tr>`).join("");
+
+const chiuse = trattative.filter(t => t.fase === "Chiuso Vinto" || t.fase === "Chiuso Perso");
+const importoChiuse = chiuse.reduce((s, t) => s + t.importo, 0);
+const normale = 'style="font-weight:400"';
+document.getElementById("totale-fasi").innerHTML = `
+  <tr><td>Totale aperte</td><td ${normale}>${numero(aperte.length)}</td><td></td>
+  <td ${normale}>${dollari(valoreAperte)}</td><td><strong>${dollari(Math.round(ponderatoAperte * 100) / 100)}</strong></td></tr>
+  <tr><td style="border-top:1px solid #e4e7eb">Totale chiuse</td><td style="font-weight:400;border-top:1px solid #e4e7eb">${numero(chiuse.length)}</td><td style="border-top:1px solid #e4e7eb"></td>
+  <td style="font-weight:400;border-top:1px solid #e4e7eb">${dollari(importoChiuse)}</td><td style="font-weight:400;border-top:1px solid #e4e7eb">–</td></tr>`;
+</script>
+</body>
+</html>

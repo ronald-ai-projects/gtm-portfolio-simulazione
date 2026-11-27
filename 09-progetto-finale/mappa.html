@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mappa priorità agenzie – SIMULAZIONE</title>
+<style>
+  body { font-family: system-ui, "Segoe UI", Arial, sans-serif; margin: 0; padding: 24px;
+         background: #f6f7f9; color: #1f2328; }
+  .wrap { max-width: 960px; margin: 0 auto; }
+  h1 { font-size: clamp(24px, 6vw, 44px); margin: 0 0 4px; color: #c62828; letter-spacing: .5px; }
+  .sotto { color: #57606a; margin: 0 0 18px; }
+  .carta { background: #fff; border: 1px solid #d0d7de; border-radius: 10px; padding: 16px;
+           margin-bottom: 20px; position: relative; }
+  svg { width: 100%; height: auto; display: block; background: #eef4f8; border-radius: 6px; }
+  .g { stroke: #d3dee6; stroke-width: 1; }
+  .gt { fill: #8a99a6; font-size: 11px; }
+  .p circle { stroke: #fff; stroke-width: 2; cursor: pointer; }
+  .p:hover circle { stroke: #1f2328; stroke-width: 3; }
+  .n { fill: #fff; font-size: 11px; font-weight: 700; text-anchor: middle; pointer-events: none; }
+  .legenda { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 12px; font-size: 14px; }
+  .pallino { display: inline-block; width: 14px; height: 14px; border-radius: 50%;
+             margin-right: 6px; vertical-align: -2px; }
+  #tip { position: absolute; pointer-events: none; background: #1f2328; color: #fff;
+         padding: 6px 10px; border-radius: 6px; font-size: 13px; display: none; white-space: nowrap; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { padding: 8px 6px; border-bottom: 1px solid #e5e8eb; text-align: left; }
+  th { background: #f0f2f4; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .tag { color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 12px; font-weight: 600; }
+  .nota { font-size: 12px; color: #6e7781; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>SIMULAZIONE – agenzie inventate</h1>
+  <p class="sotto">Priorità di contatto delle agenzie immobiliari (dati di prova, nessun dato reale).
+     Passa sopra a un punto per vedere il nome; il numero nel punto è il punteggio.</p>
+
+  <div class="carta">
+    <svg viewBox="0 0 900 560" role="img" aria-label="Mappa delle agenzie per priorità">
+      <line x1="94.6" y1="0" x2="94.6" y2="560" class="g"/><text x="97.6" y="554" class="gt">13.4°E</text><line x1="171.9" y1="0" x2="171.9" y2="560" class="g"/><text x="174.9" y="554" class="gt">13.5°E</text><line x1="249.1" y1="0" x2="249.1" y2="560" class="g"/><text x="252.1" y="554" class="gt">13.6°E</text><line x1="326.4" y1="0" x2="326.4" y2="560" class="g"/><text x="329.4" y="554" class="gt">13.7°E</text><line x1="403.6" y1="0" x2="403.6" y2="560" class="g"/><text x="406.6" y="554" class="gt">13.8°E</text><line x1="480.9" y1="0" x2="480.9" y2="560" class="g"/><text x="483.9" y="554" class="gt">13.9°E</text><line x1="558.2" y1="0" x2="558.2" y2="560" class="g"/><text x="561.2" y="554" class="gt">14.0°E</text><line x1="635.4" y1="0" x2="635.4" y2="560" class="g"/><text x="638.4" y="554" class="gt">14.1°E</text><line x1="712.7" y1="0" x2="712.7" y2="560" class="g"/><text x="715.7" y="554" class="gt">14.2°E</text><line x1="789.9" y1="0" x2="789.9" y2="560" class="g"/><text x="792.9" y="554" class="gt">14.3°E</text><line x1="867.2" y1="0" x2="867.2" y2="560" class="g"/><text x="870.2" y="554" class="gt">14.4°E</text><line x1="0" y1="479.0" x2="900" y2="479.0" class="g"/><text x="4" y="476.0" class="gt">42.3°N</text><line x1="0" y1="374.3" x2="900" y2="374.3" class="g"/><text x="4" y="371.3" class="gt">42.4°N</text><line x1="0" y1="269.5" x2="900" y2="269.5" class="g"/><text x="4" y="266.5" class="gt">42.5°N</text><line x1="0" y1="164.8" x2="900" y2="164.8" class="g"/><text x="4" y="161.8" class="gt">42.6°N</text><line x1="0" y1="60.0" x2="900" y2="60.0" class="g"/><text x="4" y="57.0" class="gt">42.7°N</text>
+      <g class="p" data-info="Casa Oliveto – Olivafinta (PE) · 1 punti · priorità Bassa"><title>Casa Oliveto – Olivafinta (PE) · 1 punti · priorità Bassa</title><circle cx="635.4" cy="374.3" r="11" fill="#9aa0a6"/><text x="635.4" y="378.3" class="n">1</text></g><g class="p" data-info="Casa Borgo Alto – Montefinto (TE) · 0 punti · priorità Bassa"><title>Casa Borgo Alto – Montefinto (TE) · 0 punti · priorità Bassa</title><circle cx="287.8" cy="122.9" r="11" fill="#9aa0a6"/><text x="287.8" y="126.9" class="n">0</text></g><g class="p" data-info="Immobiliare Sette Colli Finti – Settecolli Finto (CH) · 0 punti · priorità Bassa"><title>Immobiliare Sette Colli Finti – Settecolli Finto (CH) · 0 punti · priorità Bassa</title><circle cx="789.9" cy="479.0" r="11" fill="#9aa0a6"/><text x="789.9" y="483.0" class="n">0</text></g><g class="p" data-info="Immobiliare Mare Calmo – Spiaggiafinta (PE) · 0 punti · priorità Bassa"><title>Immobiliare Mare Calmo – Spiaggiafinta (PE) · 0 punti · priorità Bassa</title><circle cx="743.6" cy="342.9" r="11" fill="#9aa0a6"/><text x="743.6" y="346.9" class="n">0</text></g><g class="p" data-info="Studio Casa Querceto – Colleprova (CH) · 4 punti · priorità Media"><title>Studio Casa Querceto – Colleprova (CH) · 4 punti · priorità Media</title><circle cx="674.0" cy="416.2" r="11" fill="#f08c00"/><text x="674.0" y="420.2" class="n">4</text></g><g class="p" data-info="Immobiliare Lago Blu Finto – Lagofinto (AQ) · 3 punti · priorità Media"><title>Immobiliare Lago Blu Finto – Lagofinto (AQ) · 3 punti · priorità Media</title><circle cx="171.9" cy="500.0" r="11" fill="#f08c00"/><text x="171.9" y="504.0" class="n">3</text></g><g class="p" data-info="Immobiliare Ponte Vecchio Finto – Pontefinto (TE) · 8 punti · priorità Alta"><title>Immobiliare Ponte Vecchio Finto – Pontefinto (TE) · 8 punti · priorità Alta</title><circle cx="341.8" cy="81.0" r="11" fill="#2e9e4f"/><text x="341.8" y="85.0" class="n">8</text></g><g class="p" data-info="Agenzia Pratoverde – Rivafinta (PE) · 8 punti · priorità Alta"><title>Agenzia Pratoverde – Rivafinta (PE) · 8 punti · priorità Alta</title><circle cx="712.7" cy="301.0" r="11" fill="#2e9e4f"/><text x="712.7" y="305.0" class="n">8</text></g><g class="p" data-info="Immobiliare Valle Serena – Torano Finto (TE) · 6 punti · priorità Alta"><title>Immobiliare Valle Serena – Torano Finto (TE) · 6 punti · priorità Alta</title><circle cx="388.2" cy="60.0" r="11" fill="#2e9e4f"/><text x="388.2" y="64.0" class="n">6</text></g><g class="p" data-info="Casa Gran Pianoro – Pianoro Finto (AQ) · 5 punti · priorità Alta"><title>Casa Gran Pianoro – Pianoro Finto (AQ) · 5 punti · priorità Alta</title><circle cx="110.1" cy="416.2" r="11" fill="#2e9e4f"/><text x="110.1" y="420.2" class="n">5</text></g>
+    </svg>
+    <div id="tip"></div>
+    <div class="legenda"><b>Legenda:</b><span class="voce"><span class="pallino" style="background:#2e9e4f"></span>Alta (5+ punti) — 4</span><span class="voce"><span class="pallino" style="background:#f08c00"></span>Media (3-4 punti) — 2</span><span class="voce"><span class="pallino" style="background:#9aa0a6"></span>Bassa (0-2 punti) — 4</span></div>
+    <p class="nota">Posizioni calcolate da latitudine e longitudine (proiezione semplice, senza sfondo cartografico).</p>
+  </div>
+
+  <div class="carta">
+    <h2 style="margin-top:0">Agenzie ordinate per punteggio</h2>
+    <div style="overflow-x:auto"><table>
+      <thead><tr><th>#</th><th>Agenzia</th><th>Comune</th><th>Prov.</th><th>Email</th>
+        <th class="num">Voto</th><th class="num">Recensioni</th><th class="num">Punteggio</th>
+        <th>Priorità</th><th>Gancio</th></tr></thead>
+      <tbody><tr><td>1</td><td>Immobiliare Ponte Vecchio Finto</td><td>Pontefinto</td><td>TE</td><td>info@pontevecchiofinto.example.com</td><td class="num">4,9</td><td class="num">84</td><td class="num"><b>8</b></td><td><span class="tag" style="background:#2e9e4f">Alta</span></td><td>Nuova sede o nuovo servizio</td></tr><tr><td>2</td><td>Agenzia Pratoverde</td><td>Rivafinta</td><td>PE</td><td>info@pratoverde.example.com</td><td class="num">4,8</td><td class="num">62</td><td class="num"><b>8</b></td><td><span class="tag" style="background:#2e9e4f">Alta</span></td><td>Nuova sede o nuovo servizio</td></tr><tr><td>3</td><td>Immobiliare Valle Serena</td><td>Torano Finto</td><td>TE</td><td>info@valleserena.example.com</td><td class="num">4,7</td><td class="num">38</td><td class="num"><b>6</b></td><td><span class="tag" style="background:#2e9e4f">Alta</span></td><td>Offerta di lavoro aperta</td></tr><tr><td>4</td><td>Casa Gran Pianoro</td><td>Pianoro Finto</td><td>AQ</td><td>info@granpianoro.example.com</td><td class="num">4,6</td><td class="num">19</td><td class="num"><b>5</b></td><td><span class="tag" style="background:#2e9e4f">Alta</span></td><td>Offerta di lavoro aperta</td></tr><tr><td>5</td><td>Studio Casa Querceto</td><td>Colleprova</td><td>CH</td><td>info@querceto.example.com</td><td class="num">4,5</td><td class="num">27</td><td class="num"><b>4</b></td><td><span class="tag" style="background:#f08c00">Media</span></td><td>Nuova sede o nuovo servizio</td></tr><tr><td>6</td><td>Immobiliare Lago Blu Finto</td><td>Lagofinto</td><td>AQ</td><td>info@lagoblufinto.example.com</td><td class="num">4,4</td><td class="num">31</td><td class="num"><b>3</b></td><td><span class="tag" style="background:#f08c00">Media</span></td><td>Nuova sede o nuovo servizio</td></tr><tr><td>7</td><td>Casa Oliveto</td><td>Olivafinta</td><td>PE</td><td>info@casaoliveto.example.com</td><td class="num">4,3</td><td class="num">22</td><td class="num"><b>1</b></td><td><span class="tag" style="background:#9aa0a6">Bassa</span></td><td>Nessun segnale forte</td></tr><tr><td>8</td><td>Casa Borgo Alto</td><td>Montefinto</td><td>TE</td><td>info@casaborgoalto.example.com</td><td class="num">4,2</td><td class="num">15</td><td class="num"><b>0</b></td><td><span class="tag" style="background:#9aa0a6">Bassa</span></td><td>Nessun segnale forte</td></tr><tr><td>9</td><td>Immobiliare Sette Colli Finti</td><td>Settecolli Finto</td><td>CH</td><td>info@settecollifinti.example.com</td><td class="num">4,0</td><td class="num">11</td><td class="num"><b>0</b></td><td><span class="tag" style="background:#9aa0a6">Bassa</span></td><td>Nessun segnale forte</td></tr><tr><td>10</td><td>Immobiliare Mare Calmo</td><td>Spiaggiafinta</td><td>PE</td><td>info@marecalmo.example.com</td><td class="num">3,9</td><td class="num">9</td><td class="num"><b>0</b></td><td><span class="tag" style="background:#9aa0a6">Bassa</span></td><td>Nessun segnale forte</td></tr></tbody>
+    </table></div>
+  </div>
+</div>
+<script>
+  var tip = document.getElementById('tip'), carta = tip.parentNode;
+  document.querySelectorAll('.p').forEach(function (p) {
+    p.addEventListener('mousemove', function (e) {
+      var r = carta.getBoundingClientRect();
+      tip.textContent = p.getAttribute('data-info');
+      tip.style.display = 'block';
+      tip.style.left = (e.clientX - r.left + 14) + 'px';
+      tip.style.top = (e.clientY - r.top + 14) + 'px';
+    });
+    p.addEventListener('mouseleave', function () { tip.style.display = 'none'; });
+  });
+</script>
+</body>
+</html>

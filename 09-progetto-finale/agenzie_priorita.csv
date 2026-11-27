@@ -1,0 +1,11 @@
+﻿agenzia;comune;provincia;email;voto;recensioni;punteggio;priorita;gancio
+Immobiliare Ponte Vecchio Finto;Pontefinto;TE;info@pontevecchiofinto.example.com;4,9;84;8;Alta;Nuova sede o nuovo servizio
+Agenzia Pratoverde;Rivafinta;PE;info@pratoverde.example.com;4,8;62;8;Alta;Nuova sede o nuovo servizio
+Immobiliare Valle Serena;Torano Finto;TE;info@valleserena.example.com;4,7;38;6;Alta;Offerta di lavoro aperta
+Casa Gran Pianoro;Pianoro Finto;AQ;info@granpianoro.example.com;4,6;19;5;Alta;Offerta di lavoro aperta
+Studio Casa Querceto;Colleprova;CH;info@querceto.example.com;4,5;27;4;Media;Nuova sede o nuovo servizio
+Immobiliare Lago Blu Finto;Lagofinto;AQ;info@lagoblufinto.example.com;4,4;31;3;Media;Nuova sede o nuovo servizio
+Casa Oliveto;Olivafinta;PE;info@casaoliveto.example.com;4,3;22;1;Bassa;Nessun segnale forte
+Casa Borgo Alto;Montefinto;TE;info@casaborgoalto.example.com;4,2;15;0;Bassa;Nessun segnale forte
+Immobiliare Sette Colli Finti;Settecolli Finto;CH;info@settecollifinti.example.com;4,0;11;0;Bassa;Nessun segnale forte
+Immobiliare Mare Calmo;Spiaggiafinta;PE;info@marecalmo.example.com;3,9;9;0;Bassa;Nessun segnale forte

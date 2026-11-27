@@ -1,0 +1,19 @@
+[
+  {
+    "nota": "SIMULAZIONE – agenzia e persona inventate",
+    "agenzia": "Casa Prova Immobiliare",
+    "contatto": "Giulia Prova",
+    "email": "giulia@casaprova.example.com",
+    "testo_in_breve": "Interessata, chiede il prezzo e propone un incontro in agenzia",
+    "risultato": { "categoria": "interessata", "fase_hubspot": "Presentazione Servizi" }
+  },
+  {
+    "nota": "SIMULAZIONE – agenzia e persona inventate",
+    "agenzia": "Immobiliare Collefinto",
+    "contatto": "Marco Finto",
+    "email": "marco@collefinto.example.com",
+    "oggetto": "Re: le richiamate a Collefinto",
+    "testo": "Interessante, però adesso siamo pieni di lavoro. Sentiamoci a gennaio.",
+    "risultato": { "categoria": "non ora", "fase_hubspot": "Contatto Iniziale", "task": "Ricontattare Marco Finto tra 3 mesi" }
+  }
+]
